@@ -132,21 +132,26 @@ class NestedTest < MiniTest::Test
   end
 
   def test_full_menu_for_olive_garden
-    skip
+    # skip
     #=======================
-    olive_garden_menu
+    olive_garden_menu = stores[:olive_garden][:dishes].each do |menu|
+      return menu
+    end
+    #=======================
 
-    #=======================
     expected = ({"Risotto"=>{:name=>"Risotto", :ingredients=>["Rice", "Cheese", "Butter"], :price=>12},
                   "Steak"=>{:name=>"Steak", :ingredients=>["Beef", "Garlic"], :price=>15}})
     assert_equal expected, olive_garden_menu
   end
 
   def test_menu_accross_all_restaurants
-     skip
+     # skip
     #=======================
-     full_menu = {}
-     stores.each
+     menus = []
+     full_menu = stores.keys.each do |menus|
+       return full_menu
+     end
+
     #=======================
     expected = ({"Risotto"=>
                       {:name=>"Risotto", :ingredients=>["Rice", "Cheese", "Butter"], :price=>12},
