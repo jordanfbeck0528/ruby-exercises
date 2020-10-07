@@ -81,4 +81,3 @@ class HobbitTest < Minitest::Test
   end
 
 end
-
