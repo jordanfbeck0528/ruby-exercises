@@ -5,7 +5,7 @@ class CharacterCount
   def initialize()
   end
 
-  # def count(word)
-  #   word.count
-  # end
+  def count(word)
+    word.length
+  end
 end
